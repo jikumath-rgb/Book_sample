@@ -1,0 +1,12 @@
+{
+  "hash": "078e7c0614ef16cf5cb452a4396b41d9",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "# セクションタイトル\n## サブセクション\n### サブサブセクション\n\nここにサンプル文章を書く．\n\n* 箇条書きをここに書く．\n* **強調したいこと**はこのように書く．\n\nサンプルコードは以下のように書く (code-foldingをfalseにすると折りたたみにできる)：\n\n::: {#cell-fig-polar .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![A line plot on a polar axis](chapter2_sample_files/figure-html/fig-polar-output-1.png){#fig-polar width=450 height=439}\n:::\n:::\n\n\npyodideを利用した実行可能コードブロック：\n\n```{pyodide-python}\n#| label: hello-world\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n実行結果のみを表示する：\n\n::: {#44aa5640 .cell output-location='fragment' execution_count=2}\n\n::: {.cell-output .cell-output-stdout}\n```\nこれは計算の結果です。\n10 + 20 の答えは 30 です。\n```\n:::\n:::\n\n\n数式のサンプル：\n\\begin{equation}\n\\int_a^b f(x) \\, dx.\n\\end{equation}\n\n数式番号がないスタイル (ドルマーク2つのスタイル)：\n$$\n\\int_a^b f(x) \\, dx.\n$$\n\n::: {.callout-note}\n## ノート\nここはノートです．\n:::\n\n::: {.callout-tip}\n## チップ\nここはチップです．定理とか書くのにも良さそうです．\n:::\n\n::: {.callout-important}\n## 重要\nここは重要情報です．\n:::\n\n::: {.callout-warning}\n## 注意\nここはWarningです．\n:::\n\n::: {.callout-caution}\n## Caution\nここはCautionです．\n:::\n\n",
+    "supporting": [
+      "chapter2_sample_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

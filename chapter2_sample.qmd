@@ -1,0 +1,91 @@
+# セクションタイトル
+## サブセクション
+### サブサブセクション
+
+ここにサンプル文章を書く．
+
+* 箇条書きをここに書く．
+* **強調したいこと**はこのように書く．
+
+サンプルコードは以下のように書く (code-foldingをfalseにすると折りたたみにできる)：
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+pyodideを利用した実行可能コードブロック：
+
+```{pyodide-python}
+#| label: hello-world
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+実行結果のみを表示する：
+```{python}
+#| echo: false
+#| output-location: fragment
+
+print("これは計算の結果です。")
+x = 10 + 20
+print(f"10 + 20 の答えは {x} です。")
+```
+
+数式のサンプル：
+\begin{equation}
+\int_a^b f(x) \, dx.
+\end{equation}
+
+数式番号がないスタイル (ドルマーク2つのスタイル)：
+$$
+\int_a^b f(x) \, dx.
+$$
+
+::: {.callout-note}
+## ノート
+ここはノートです．
+:::
+
+::: {.callout-tip}
+## チップ
+ここはチップです．定理とか書くのにも良さそうです．
+:::
+
+::: {.callout-important}
+## 重要
+ここは重要情報です．
+:::
+
+::: {.callout-warning}
+## 注意
+ここはWarningです．
+:::
+
+::: {.callout-caution}
+## Caution
+ここはCautionです．
+:::

@@ -1,0 +1,62 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Quartoでつくる書籍のサンプル"
+  author:
+    - name: Hogehoge Taro
+      affiliation: Kaku University
+      email: hogehoge@kaku-u.ac.jp
+  date: today
+  chapters:
+    - index.qmd
+    - chapter1_intro.qmd
+    - chapter2_sample.qmd
+    - summary.qmd
+    - references.qmd
+
+# 脚注などを右横に表示：
+reference-location: margin
+
+bibliography: references.bib
+
+lang: ja
+
+format:
+  html:
+    css: custom.css
+    # --- テーマと見た目 ---
+    theme:
+      light: flatly   # 明るいテーマ（書籍風の落ち着いたフラットデザイン）
+      dark: darkly    # ダークモード対応（切り替えスイッチが自動でつきます）
+    toc: true         # 目次を表示
+    toc-depth: 3      # 目次の階層（h3まで）
+    toc-location: left # 目次を左サイドバーに配置（ドキュメントらしてく見やすい）
+    toc-title: "目次"
+    # number-sections: true # 見出しに自動番号を振る（1.1, 1.2...）
+    
+    # --- コードブロックの設定 ---
+    code-line-numbers: true # コードに行番号を表示
+    code-copy: true         # コードブロックにコピーボタンを表示
+    code-overflow: wrap     # 長いコードを折り返す（scrollにするとスクロールバー）
+    highlight-style: github # シンタックスハイライトのスタイル
+    code-fold: false # コードブロックを折りたたむかどうか
+    
+    # --- 数式と相互参照 ---
+    html-math-method: katex # 数式の描画エンジン（軽量で高速）
+    link-external-newwindow: true # 外部リンクを新しいタブで開く
+    
+    # --- 出力オプション ---
+    embed-resources: false   # pyodideを使う場合はfalseにする
+    
+    # --- メタデータ ---
+    grid:
+      sidebar-width: 300px # サイドバーの幅調整
+      body-width: 900px    # 本文の幅調整
+
+# --- 拡張機能 (pyodide)
+filters:
+  - pyodide
+
+

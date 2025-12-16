@@ -1,0 +1,138 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# セクションタイトル\n",
+        "## サブセクション\n",
+        "### サブサブセクション\n",
+        "\n",
+        "ここにサンプル文章を書く．\n",
+        "\n",
+        "* 箇条書きをここに書く．\n",
+        "* **強調したいこと**はこのように書く．\n",
+        "\n",
+        "サンプルコードは以下のように書く (code-foldingをfalseにすると折りたたみにできる)："
+      ],
+      "id": "5edb403f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-polar\n",
+        "#| fig-cap: A line plot on a polar axis\n",
+        "\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "r = np.arange(0, 2, 0.01)\n",
+        "theta = 2 * np.pi * r\n",
+        "fig, ax = plt.subplots(\n",
+        "  subplot_kw = {'projection': 'polar'} \n",
+        ")\n",
+        "ax.plot(theta, r)\n",
+        "ax.set_rticks([0.5, 1, 1.5, 2])\n",
+        "ax.grid(True)\n",
+        "plt.show()"
+      ],
+      "id": "fig-polar",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "pyodideを利用した実行可能コードブロック：\n",
+        "\n",
+        "```{pyodide-python}\n",
+        "#| label: hello-world\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "r = np.arange(0, 2, 0.01)\n",
+        "theta = 2 * np.pi * r\n",
+        "fig, ax = plt.subplots(\n",
+        "  subplot_kw = {'projection': 'polar'} \n",
+        ")\n",
+        "ax.plot(theta, r)\n",
+        "ax.set_rticks([0.5, 1, 1.5, 2])\n",
+        "ax.grid(True)\n",
+        "plt.show()\n",
+        "```\n",
+        "\n",
+        "実行結果のみを表示する："
+      ],
+      "id": "865e6f13"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "output-location": "fragment"
+      },
+      "source": [
+        "#| echo: false\n",
+        "\n",
+        "print(\"これは計算の結果です。\")\n",
+        "x = 10 + 20\n",
+        "print(f\"10 + 20 の答えは {x} です。\")"
+      ],
+      "id": "ff516ebd",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "数式のサンプル：\n",
+        "\\begin{equation}\n",
+        "\\int_a^b f(x) \\, dx.\n",
+        "\\end{equation}\n",
+        "\n",
+        "数式番号がないスタイル (ドルマーク2つのスタイル)：\n",
+        "$$\n",
+        "\\int_a^b f(x) \\, dx.\n",
+        "$$\n",
+        "\n",
+        "::: {.callout-note}\n",
+        "## ノート\n",
+        "ここはノートです．\n",
+        ":::\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "## チップ\n",
+        "ここはチップです．定理とか書くのにも良さそうです．\n",
+        ":::\n",
+        "\n",
+        "::: {.callout-important}\n",
+        "## 重要\n",
+        "ここは重要情報です．\n",
+        ":::\n",
+        "\n",
+        "::: {.callout-warning}\n",
+        "## 注意\n",
+        "ここはWarningです．\n",
+        ":::\n",
+        "\n",
+        "::: {.callout-caution}\n",
+        "## Caution\n",
+        "ここはCautionです．\n",
+        ":::"
+      ],
+      "id": "62d1a1e8"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/yoshikijikumaru/Library/Python/3.12/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

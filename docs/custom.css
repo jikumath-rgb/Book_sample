@@ -1,0 +1,119 @@
+/* custom.css */
+
+/* --- Calloutの配色設定 --- */
+
+/* Note: 緑 (Green) */
+div.callout-note.callout-style-default {
+    border-left-color: #2ecc71;
+}
+
+div.callout-note.callout-style-default .callout-header {
+    background-color: rgba(46, 204, 113, 0.1);
+    /* 薄い緑の背景 */
+    color: #2ecc71;
+    /* 文字は少し濃い緑で読みやすく */
+}
+
+/* Tip: 青 (Blue) */
+div.callout-tip.callout-style-default {
+    border-left-color: #3498db;
+}
+
+div.callout-tip.callout-style-default .callout-header {
+    background-color: rgba(52, 152, 219, 0.1);
+    /* 薄い青の背景 */
+    color: #3498db;
+}
+
+/* Important: 紫 (Purple) */
+div.callout-important.callout-style-default {
+    border-left-color: #9b59b6;
+}
+
+div.callout-important.callout-style-default .callout-header {
+    background-color: rgba(155, 89, 182, 0.1);
+    /* 薄い紫の背景 */
+    color: #8e44ad;
+}
+
+/* Warning: 黄土色 (Ochre / Dark Yellow) */
+div.callout-warning.callout-style-default {
+    border-left-color: #f39c12;
+}
+
+div.callout-warning.callout-style-default .callout-header {
+    background-color: rgba(243, 156, 18, 0.1);
+    /* 薄い黄土色の背景 */
+    color: #d35400;
+    /* 文字はオレンジ寄りで読みやすく */
+}
+
+/* Caution: 赤 (Red) */
+div.callout-caution.callout-style-default {
+    border-left-color: #e74c3c;
+}
+
+div.callout-caution.callout-style-default .callout-header {
+    background-color: rgba(231, 76, 60, 0.1);
+    /* 薄い赤の背景 */
+    color: #c0392b;
+}
+
+/* --- 見出しのデザイン --- */
+
+/* H2: オレンジ背景に白抜き文字 */
+main h2 {
+    background-color: #e67e22;
+    /* 鮮やかなオレンジ (Calloutの色味と調整) */
+    color: #ffffff;
+    /* 白文字 */
+    padding: 0.5rem 1rem;
+    /* 文字の周りの余白 (上下 左右) */
+    border-radius: 6px;
+    /* 角を少し丸くして柔らかい印象に */
+    margin-top: 2rem;
+    /* 上の段落との間隔を広めに取る */
+    margin-bottom: 1rem;
+    /* 下の段落との間隔 */
+
+    /* 影をつけて少し浮かせる（お好みで削除可） */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* H3: 冒頭に赤い丸（ボタン風） */
+main h3 {
+    position: relative;
+    /* 位置調整の基準 */
+    padding-left: 1.5rem;
+    /* 左側に丸が入る分の余白を空ける */
+    margin-top: 1.5rem;
+    /* 上の間隔 */
+    border-bottom: 1px solid #ecf0f1;
+    /* 薄い下線を入れて区切りを良くする */
+    padding-bottom: 0.5rem;
+    /* 下線との距離 */
+}
+
+main h3::before {
+    content: '';
+    /* 疑似要素の中身は空 */
+    display: inline-block;
+
+    /* 丸のサイズと形 */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* 50%で完全な円になる */
+
+    /* 色と位置 */
+    background-color: #e74c3c;
+    /* 赤色 */
+
+    /* 文字の横に配置するための絶対配置 */
+    position: absolute;
+    left: 0;
+    top: 40%;
+    /* 上から50%の位置 */
+    transform: translateY(-50%);
+    /* 自身の大きさの半分だけ上にずらして完全な上下中央にする */
+}
