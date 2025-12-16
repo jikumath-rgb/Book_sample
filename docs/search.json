@@ -38,5 +38,15 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>サマリー</span>"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quartoでつくる書籍のサンプル",
+    "section": "",
+    "text": "はじめに\nこれはQuatro Bookのサンプルです．\nタイトル横のボタンを押すことでダークモードに切り替えできます．\nより詳しい情報は下記サイトを参照してください： https://quarto.org/docs/books.",
+    "crumbs": [
+      "はじめに"
+    ]
   }
 ]
